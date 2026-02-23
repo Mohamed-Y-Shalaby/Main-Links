@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb; /* Professional Blue */
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px; /* Mobile width */
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h1 { font-size: 24px; margin: 0 0 10px 0; }
+        p.bio { color: #64748b; font-size: 14px; margin-bottom: 30px; line-height: 1.5; }
+        
+        .link-card {
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        .text-group { text-align: left; }
+        .link-title { font-weight: 600; display: block; font-size: 16px; }
+        .link-desc { font-size: 12px; color: #64748b; margin-top: 2px; }
+        
+        .footer { margin-top: 40px; font-size: 12px; color: #94a3b8; }
+        .email-link { color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Replace with your image URL -->
+        <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
+        
+        <h1>Your Name</h1>
+        <p class="bio">Inventor & Engineer.<br>Exploring the future of [Your Industry].<br>View my work below.</p>
+
+        <!-- Link 1: Video -->
+        <a href="YOUR_VIDEO_LINK_HERE" class="link-card" target="_blank">
+            <span class="icon">🎥</span>
+            <div class="text-group">
+                <span class="link-title">Watch Prototype Demo</span>
+                <span class="link-desc">See the technology in action</span>
+            </div>
+        </a>
+
+        <!-- Link 2: Patent -->
+        <a href="YOUR_PATENT_LINK_HERE" class="link-card" target="_blank">
+            <span class="icon">📜</span>
+            <div class="text-group">
+                <span class="link-title">View Registered Patent</span>
+                <span class="link-desc">USPTO Pub. No. XXXXXXX</span>
+            </div>
+        </a>
+
+        <!-- Link 3: CV -->
+        <a href="YOUR_CV_PDF_LINK_HERE" class="link-card" target="_blank">
+            <span class="icon">👤</span>
+            <div class="text-group">
+                <span class="link-title">Download CV</span>
+                <span class="link-desc">Professional background (PDF)</span>
+            </div>
+        </a>
+
+        <div class="footer">
+            <p>Interested in collaboration?</p>
+            <a href="mailto:your@email.com" class="email-link">Contact Me</a>
+            <br><br>
+            &copy; 2024 Your Name
+        </div>
+    </div>
+
+</body>
+</html>
