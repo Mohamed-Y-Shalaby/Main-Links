@@ -6,10 +6,11 @@
     <title>Innovation Portfolio</title>
     <style>
         :root {
-            --primary: #2563eb; /* Professional Blue */
+            --primary: #2563eb;
             --dark: #1e293b;
             --light: #f8fafc;
             --white: #ffffff;
+            --gray: #64748b;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -24,28 +25,60 @@
         }
         .container {
             width: 100%;
-            max-width: 400px; /* Mobile width */
-            padding: 40px 20px;
+            max-width: 480px;
+            padding: 30px 20px;
             text-align: center;
         }
+        
+        /* === Two Profiles Section === */
+        .profiles {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 140px;
+        }
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            object-fit: fill;
-            margin-bottom: 20px;
+            object-fit: cover;
             border: 3px solid var(--white);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
         }
-        h1 { font-size: 24px; margin: 0 0 10px 0; }
-        p.bio { color: #64748b; font-size: 14px; margin-bottom: 30px; line-height: 1.5; }
+        .profile-name {
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            color: var(--dark);
+        }
+        .profile-title {
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 3px;
+        }
         
+        .bio {
+            color: var(--gray);
+            font-size: 14px;
+            margin: 15px 0 30px 0;
+            line-height: 1.5;
+        }
+        
+        /* === Link Cards === */
         .link-card {
             background: var(--white);
             display: flex;
             align-items: center;
             padding: 15px 20px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-radius: 12px;
             text-decoration: none;
             color: var(--dark);
@@ -59,27 +92,92 @@
             border-color: var(--primary);
         }
         .icon {
-            font-size: 24px;
+            font-size: 22px;
             margin-right: 15px;
             width: 30px;
             text-align: center;
+            flex-shrink: 0;
         }
-        .text-group { text-align: left; }
-        .link-title { font-weight: 600; display: block; font-size: 16px; }
-        .link-desc { font-size: 12px; color: #64748b; margin-top: 2px; }
+        .text-group { text-align: left; flex: 1; }
+        .link-title { font-weight: 600; display: block; font-size: 15px; }
+        .link-desc { font-size: 12px; color: var(--gray); margin-top: 2px; }
         
-        .footer { margin-top: 40px; font-size: 12px; color: #94a3b8; }
-        .email-link { color: var(--primary); text-decoration: none; font-weight: 600; }
+        /* === Dual CV Links === */
+        .dual-cv {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .cv-link {
+            flex: 1;
+            background: var(--white);
+            padding: 12px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--dark);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .cv-link:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        .cv-icon { font-size: 20px; }
+        .cv-name { font-weight: 600; font-size: 13px; }
+        .cv-label { font-size: 10px; color: var(--gray); }
+        
+        .footer {
+            margin-top: 35px;
+            font-size: 12px;
+            color: var(--gray);
+        }
+        .email-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* === Mobile Responsiveness === */
+        @media (max-width: 380px) {
+            .profiles { gap: 15px; }
+            .profile-img { width: 100px; height: 100px; }
+            .dual-cv { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Replace with your image URL -->
-        <img src="Picture1.png" alt="Profile" class="profile-img">
         
-        <h1>Mohamed Shalaby</h1>
-        <p class="bio">Assoc. Professor @ Imam Mohammad Ibn Saud Islamic University<br>Exploring the future of Water Desalination Systems<br>View my work below</p>
+        <!-- === TWO PROFILES SIDE BY SIDE === -->
+        <div class="profiles">
+            <!-- Your Profile -->
+            <div class="profile-card">
+                <img src="Picture1.png" alt="Mohamed Shalaby" class="profile-img">
+                <div class="profile-name">Mohamed Shalaby</div>
+                <div class="profile-title">Assoc. Professor</div>
+            </div>
+            
+            <!-- Colleague Profile - UPDATE THESE VALUES -->
+            <div class="profile-card">
+                <!-- 🔹 REPLACE WITH COLLEAGUE'S PHOTO -->
+                <img src="colleague-photo.png" alt="Colleague Name" class="profile-img">
+                <!-- 🔹 REPLACE WITH COLLEAGUE'S NAME & TITLE -->
+                <div class="profile-name">Colleague Name</div>
+                <div class="profile-title">Co-Inventor / Title</div>
+            </div>
+        </div>
+        
+        <p class="bio">
+            Imam Mohammad Ibn Saud Islamic University<br>
+            Advancing Water Desalination Systems<br>
+            <strong>Patent No. US12448302B1</strong>
+        </p>
 
         <!-- Link 1: Video -->
         <a href="https://drive.google.com/file/d/1jAntmuvkmuTJ9ZhSZkZ07HVhSI5Y1ezA/view?usp=drive_link" class="link-card" target="_blank">
@@ -95,24 +193,32 @@
             <span class="icon">📜</span>
             <div class="text-group">
                 <span class="link-title">View Registered Patent</span>
-                <span class="link-desc">USPTO Pub. No. US12448302B1</span>
+                <span class="link-desc">USPTO Publication No. US12448302B1</span>
             </div>
         </a>
 
-        <!-- Link 3: CV -->
-        <a href="https://mohamed-y-shalaby.github.io/Mohamed-Y-Shalaby/" class="link-card" target="_blank">
-            <span class="icon">👤</span>
-            <div class="text-group">
-                <span class="link-title">Download CV</span>
-                <span class="link-desc">Professional background (PDF)</span>
-            </div>
-        </a>
+        <!-- === DUAL CV LINKS SIDE BY SIDE === -->
+        <div class="dual-cv">
+            <!-- Your CV -->
+            <a href="https://mohamed-y-shalaby.github.io/Mohamed-Y-Shalaby/" class="cv-link" target="_blank">
+                <span class="cv-icon">👤</span>
+                <span class="cv-name">Mohamed Shalaby</span>
+                <span class="cv-label">Download CV</span>
+            </a>
+            
+            <!-- Colleague CV - UPDATE THIS LINK -->
+            <a href="COLLEAGUE_CV_LINK_HERE" class="cv-link" target="_blank">
+                <span class="cv-icon">👤</span>
+                <span class="cv-name">Colleague Name</span>
+                <span class="cv-label">Download CV</span>
+            </a>
+        </div>
 
         <div class="footer">
-            <p>Interested in collaboration?</p>
-            <a href="mailto:myshalaby@imamu.edu.sa" class="email-link">Contact Me</a>
+            <p>Interested in collaboration or licensing?</p>
+            <a href="mailto:myshalaby@imamu.edu.sa" class="email-link">Contact Us</a>
             <br><br>
-            &copy; 2026 Mohamed Shalaby
+            &copy; 2026 Mohamed Shalaby & Team
         </div>
     </div>
 
