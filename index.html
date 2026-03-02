@@ -1,231 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovation Portfolio</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --gray: #64748b;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 100%;
-            max-width: 480px;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        
-        /* === Two Profiles Section === */
-        .profiles {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-        .profile-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 140px;
-        }
-        .profile-img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: fill;
-            border: 3px solid var(--white);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-        }
-        .profile-name {
-            font-weight: 600;
-            font-size: 14px;
-            text-align: center;
-            color: var(--dark);
-        }
-        .profile-title {
-            font-size: 11px;
-            color: var(--gray);
-            margin-top: 3px;
-        }
-        
-        .bio {
-            color: var(--gray);
-            font-size: 14px;
-            margin: 15px 0 30px 0;
-            line-height: 1.5;
-        }
-        
-        /* === Link Cards === */
-        .link-card {
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--dark);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #e2e8f0;
-        }
-        .link-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-color: var(--primary);
-        }
-        .icon {
-            font-size: 22px;
-            margin-right: 15px;
-            width: 30px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-        .text-group { text-align: left; flex: 1; }
-        .link-title { font-weight: 600; display: block; font-size: 15px; }
-        .link-desc { font-size: 12px; color: var(--gray); margin-top: 2px; }
-        
-        /* === Dual CV Links === */
-        .dual-cv {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .cv-link {
-            flex: 1;
-            background: var(--white);
-            padding: 12px 10px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--dark);
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .cv-link:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-        }
-        .cv-icon { font-size: 20px; }
-        .cv-name { font-weight: 600; font-size: 13px; }
-        .cv-label { font-size: 10px; color: var(--gray); }
-        
-        .footer {
-            margin-top: 35px;
-            font-size: 12px;
-            color: var(--gray);
-        }
-        .email-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        /* === Mobile Responsiveness === */
-        @media (max-width: 380px) {
-            .profiles { gap: 15px; }
-            .profile-img { width: 100px; height: 100px; }
-            .dual-cv { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        
-        <!-- === TWO PROFILES SIDE BY SIDE === -->
-        <div class="profiles">
-            <!-- Your Profile -->
-            <div class="profile-card">
-                <img src="Picture1.png" alt="Mohamed Shalaby" class="profile-img">
-                <div class="profile-name">Mohamed Y. M. Shalaby</div>
-                <div class="profile-title">Inventor / Associate Professor</div>
-            </div>
-            
-            <!-- Colleague Profile - UPDATE THESE VALUES -->
-            <div class="profile-card">
-                <!-- 🔹 REPLACE WITH COLLEAGUE'S PHOTO -->
-                <img src="Abdulrahman_Alshaabani.jpg" alt="Abdulrhman Alshaabani" class="profile-img">
-                <div class="profile-name">Abdulrhman Alshaabani</div>
-                <div class="profile-title">Co-Inventor / Assist. Professor</div>
-            </div>
-        </div>
-        
-        <p class="bio">
-            Imam Mohammad Ibn Saud Islamic University<br>
-            Advancing Water Desalination Systems / Converter-Free PV-Powered Water Desalination System for Remote Communities<br>
-            <strong>Patent No. US12448302B1</strong>
-        </p>
-
-        <!-- Link 1: Video -->
-        <a href="https://drive.google.com/file/d/1jAntmuvkmuTJ9ZhSZkZ07HVhSI5Y1ezA/view?usp=drive_link" class="link-card" target="_blank">
-            <span class="icon">🎥</span>
-            <div class="text-group">
-                <span class="link-title">Watch Prototype Demo</span>
-                <span class="link-desc">See the technology in action</span>
-            </div>
-        </a>
-
-        <!-- Link 2: Patent -->
-        <a href="https://patents.google.com/patent/US12448302B1" class="link-card" target="_blank">
-            <span class="icon">📜</span>
-            <div class="text-group">
-                <span class="link-title">View Registered Patent</span>
-                <span class="link-desc">USPTO Publication No. US12448302B1</span>
-            </div>
-        </a>
-
-<div class="patent-links">
-    <a href="french-summary.pdf" target="_blank" style="color: #f5576c; font-weight: bold;">
-        🇫🇷 Télécharger le Résumé (Français - PDF)
-    </a>
-</div>
-        
-        <!-- === DUAL CV LINKS SIDE BY SIDE === -->
-        <div class="dual-cv">
-            <!-- Your CV -->
-            <a href="https://mohamed-y-shalaby.github.io/Mohamed-Y-Shalaby/" class="cv-link" target="_blank">
-                <span class="cv-icon">👤</span>
-                <span class="cv-name">Mohamed Shalaby</span>
-                <span class="cv-label">Download CV</span>
-            </a>
-            
-            <!-- Colleague CV - UPDATE THIS LINK -->
-            <a href="https://mohamed-y-shalaby.github.io/Main-Links/Abdulrhman_Alshaabani_CV.pdf" class="cv-link" target="_blank">
-                <span class="cv-icon">👤</span>
-                <span class="cv-name">Abdulrhman Alshaabani</span>
-                <span class="cv-label">Download CV</span>
-            </a>
-        </div>
-
-        <div class="footer">
-            <p>Interested in collaboration or licensing?</p>
-            <a href="mailto:myshalaby@imamu.edu.sa" class="email-link">Contact Us</a>
-            <br><br>
-            &copy; 2026 Mohamed Shalaby & Team
-        </div>
+<!-- Patent Information Section -->
+<div class="patent-section">
+    <h2>Patent Information</h2>
+    
+    <div class="patent-details">
+        <p><strong>Patent Number:</strong> US12448302B1</p>
+        <p><strong>Applicant:</strong> Imam Mohammad Ibn Saud Islamic University</p>
+        <p><strong>Publication Date:</strong> October 21, 2025</p>
+        <p><strong>Protected Claims:</strong> Converter-free PV integration, adaptive heater reconfiguration, and MPPT-based resistance matching without DC-DC Converters</p>
     </div>
+    
+    <!-- View Registered Patent Section -->
+    <div class="view-patent-section">
+        <h3>📄 View Registered Patent</h3>
+        
+        <!-- Link to USPTO/Google Patents -->
+        <a href="https://patents.google.com/patent/US12448302B1" 
+           class="patent-button" 
+           target="_blank"
+           rel="noopener noreferrer">
+            🔗 View Full Patent (English)
+        </a>
+        
+        <!-- NEW: French Summary PDF Box -->
+        <div class="french-summary-box">
+            <h4>🇫🇷 Résumé en Français</h4>
+            <p>Accédez au résumé du brevet en langue française</p>
+            <a href="path/to/your/french-summary.pdf" 
+               class="pdf-button" 
+               target="_blank"
+               rel="noopener noreferrer">
+                📥 Télécharger le Résumé (PDF)
+            </a>
+        </div>
+        
+    </div>
+</div>
 
-</body>
-</html>
+<!-- CSS Styles -->
+<style>
+    .patent-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 20px 0;
+        color: white;
+        font-family: 'Arial', sans-serif;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .patent-section h2 {
+        margin-top: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    
+    .patent-details {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .patent-details p {
+        margin: 8px 0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .view-patent-section {
+        background: rgba(255,255,255,0.95);
+        border-radius: 8px;
+        padding: 20px;
+        color: #333;
+    }
+    
+    .view-patent-section h3 {
+        margin-top: 0;
+        color: #667eea;
+        font-size: 18px;
+    }
+    
+    .patent-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 10px 10px 10px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .patent-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    /* NEW: French Summary Box Styles */
+    .french-summary-box {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border: 2px solid #667eea;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .french-summary-box h4 {
+        margin: 0 0 10px 0;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .french-summary-box p {
+        margin: 0 0 15px 0;
+        color: #666;
+        font-size: 13px;
+        font-style: italic;
+    }
+    
+    .pdf-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .pdf-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    }
+</style>
